@@ -1,0 +1,43 @@
+<style>
+    :root {
+        --height: 50px;
+    }
+    #header
+    {
+        background:#444;
+        width:100%;
+        height: var(--height);
+    }
+    #header *
+    {
+        list-style-type: none!important;
+    }
+    #header ul
+    {
+        height:100%;
+        margin:0; padding:0;
+        display: flex;
+        margin-left: 50px;
+        align-items: center;
+    }
+    #header a
+    {
+        height:100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+    }
+    #header a:hover
+    {
+        background: #333;
+    }
+</style>
+<div id="header">
+    <ul>
+        <a href="./index.html">Home</a>
+        <a href="./research.html">Research</a>
+    </ul>
+</div>

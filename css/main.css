@@ -1,0 +1,24 @@
+:root
+{
+    --padding : 10px;
+    --scroll-in-time : 2s;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main
+{
+    padding: var(--padding);
+    display:none;
+}
+
+.scroll_in
+{
+    display:flex!important;
+    transition: var(--scroll-in-time);
+
+}
