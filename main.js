@@ -20,9 +20,8 @@ async function scroll_in()
 {
     let e = await document.getElementsByClassName("main");
     let es = Array.from(e)
-    console.log(e)
     es.forEach(elem=>{
-        elem.style.classList.add("scroll_in");
+        elem.classList.add("scroll_in");
     })
 
 }
@@ -42,13 +41,18 @@ async function load_css(url)
 async function create_header()
 {
     let header = await getText(html_dir + header_html_file);
-    document.body.appendChild(create_elem("div", header));
+    let header_elem = create_elem("div", header);
+    header_elem.style.width = "100%";
+    document.body.prepend(header_elem);
 }
 
 async function load_page(page)
 {
     let elem = await getText(html_dir + page + ".html");
     document.body.appendChild(create_elem("div", elem));
+
+    scroll_in();
+
 }
 
 window.manager =
@@ -61,5 +65,5 @@ window.manager =
 window.addEventListener("load",
 async function (){
     await load_css("main");
-    scroll_in();
+    window.loadedAll = true;
 })

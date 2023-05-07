@@ -1,24 +1,51 @@
 :root
 {
-    --padding : 10px;
-    --scroll-in-time : 2s;
+    --padding : 20px;
+    --scroll-in-time : 5s;
 }
 
 body
 {
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background:#f5f5f5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .main
 {
+    background:white;
+    width:70%;
     padding: var(--padding);
-    display:none;
+    display:flex!important;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.scroll_in
-{
-    display:flex!important;
-    transition: var(--scroll-in-time);
+p, li {
+    color:#333;
+    font-weight:lighter;
+    font-family: Helvetica, sans-serif;
+}
 
+h3 {
+    color: #444;
+}
+
+h2 {
+    color: #666;
+}
+
+app-panel {
+    background: #eee;
+    padding:10px;
+    margin-top:10px;
+    font-family: Helvetica, sans-serif;
+}
+
+app-panel h4 {
+    font-style: italic;
+    font-weight: bold;
 }
